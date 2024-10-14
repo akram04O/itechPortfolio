@@ -74,10 +74,6 @@
         </div>
       </div>
      </div>
-     <!--Servey section-->
-     <div class="survey-section mb-20">
-      <ServeyComponent />
-     </div>
     <!-- footer section -->
     <div class="footer-section mb-20">
         <FOOTER/>
