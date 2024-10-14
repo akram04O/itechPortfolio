@@ -1,0 +1,119 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+
+    .menu-bar {
+        @apply flex flex-col items-center list-none text-white sm:text-sm lg:text-xl glass absolute top-full divide-y divide-[#ffffff5e] sm:divide-none right-0 left-0 sm:w-2/3 md:min-w-max md:max-w-[55%]  sm:flex sm:py-0 sm:flex-row sm:justify-between sm:shadow-none sm:static transition-all duration-300 ease-in-out;
+    }
+
+    .menu-bar-closed {
+        @apply -translate-y-64 top-full absolute right-0 left-0 opacity-0 transition-all duration-300 ease-in-out;
+    }
+
+    .imp-btn{
+        @apply bg-white text-[#5E25FF] rounded-full py-2 px-4 lg:px-8 transition-all duration-300 ease-in-out hover:scale-125;
+    }
+
+    .carousel {
+        @apply absolute m-auto left-0 right-0 w-fit h-fit overflow-visible flex items-center justify-center cursor-pointer;
+    }
+
+    .carousel-mid-item {
+        @apply carousel z-20 drop-shadow-2xl transition-all duration-200 ease-in-out;
+    }
+
+    .carousel-left-item {
+        @apply carousel -translate-x-96 z-10 scale-75 transform rotate-y-12 opacity-75 transition-all duration-200 ease-in-out;
+    }
+
+    .carousel-right-item {
+        @apply carousel translate-x-96 z-10 scale-75 transform -rotate-y-12 opacity-75 transition-all duration-200 ease-in-out;
+    }
+
+    .carousel-hidden-item-left {
+        @apply carousel -translate-x-[32rem] rotate-y-180 scale-50 opacity-0 z-0 transition-all duration-200 ease-in-out;
+    }
+
+    .carousel-hidden-item-right {
+        @apply carousel translate-x-[32rem] -rotate-y-180 scale-50 opacity-0 z-0 transition-all duration-200 ease-in-out;
+    }
+}
+
+@layer base {
+    @font-face {
+        font-family: IDGrotesk;
+        font-weight: 400;
+        src: url(../fonts/ID_Grotesk/IDGroteskTrial-Bold-BF64ffd953ebc04.woff2) format("woff2");
+    }
+
+    @font-face {
+        font-family: IDGrotesk;
+        font-weight: 500;
+        src: url(../fonts/ID_Grotesk/IDGroteskTrial-Medium-BF64ffd9543bf61.woff2) format("woff2");
+    }
+
+    @font-face {
+        font-family: IDGrotesk;
+        font-weight: 100;
+        src: url(../fonts/ID_Grotesk/IDGroteskTrial-Regular-BF64ffd9541f2d0.woff2) format("woff2");
+    }
+   
+}
+
+.glass {
+    background: rgba(255, 255, 255, 0.22);
+    border-radius: 0 0 16px 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5.7px);
+    -webkit-backdrop-filter: blur(5.7px);
+    border: 1px solid rgba(255, 255, 255, 0.369);
+}
+
+.elipse {
+    position: absolute;
+    width: 50vw;
+    aspect-ratio: 1/1;
+    left: 50%;
+    top: -15vw;
+    background: #5E25FF;
+    filter: blur(206px);
+}
+
+  
+
+@media screen(sm){
+    .glass {
+        background: transparent;
+        border-radius: 0;
+        box-shadow: 0;
+        backdrop-filter: none;
+        -webkit-backdrop-filter: none;
+        border: none;
+    }
+}
+
+@media screen(sm){
+    .elipse {
+        position: absolute;
+        width: 43vw;
+        aspect-ratio: 1/1;
+        left: 75%;
+        top: -35vw;
+        background: #5E25FF;
+        filter: blur(206px);
+    }
+}
+
+body, html {
+    width: 100%;
+    height: auto;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: rgb(17, 17, 17);
+}
